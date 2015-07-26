@@ -1,0 +1,14 @@
+C:\Users\MeltingICE\Google Drive\Programming\C#\XProtect\XProtect\bin\Debug\XProtect.exe
+C:\Users\MeltingICE\Google Drive\Programming\C#\XProtect\XProtect\bin\Debug\XProtect.pdb
+C:\Users\MeltingICE\Google Drive\Programming\C#\XProtect\XProtect\obj\Debug\XProtect.Properties.Resources.resources
+C:\Users\MeltingICE\Google Drive\Programming\C#\XProtect\XProtect\obj\Debug\XProtect.csproj.GenerateResource.Cache
+C:\Users\MeltingICE\Google Drive\Programming\C#\XProtect\XProtect\obj\Debug\XProtect.exe
+C:\Users\MeltingICE\Google Drive\Programming\C#\XProtect\XProtect\obj\Debug\XProtect.pdb
+E:\GIT\xprotect\XProtect\XProtect\obj\Debug\XProtect.exe
+E:\GIT\xprotect\XProtect\XProtect\obj\Debug\XProtect.pdb
+E:\GIT\xprotect\XProtect\XProtect\bin\Debug\XProtect.exe
+E:\GIT\xprotect\XProtect\XProtect\bin\Debug\XProtect.pdb
+E:\GIT\xprotect\XProtect\XProtect\obj\Debug\XProtect.csprojResolveAssemblyReference.cache
+E:\GIT\xprotect\XProtect\XProtect\obj\Debug\XProtect.Properties.Resources.resources
+E:\GIT\xprotect\XProtect\XProtect\obj\Debug\XProtect.csproj.GenerateResource.Cache
+E:\GIT\xprotect\XProtect\XProtect\obj\Debug\XProtect.mainForm.resources
