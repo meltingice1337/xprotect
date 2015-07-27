@@ -342,11 +342,11 @@ class Encryption
             {
                 AES.KeySize = keySize;
                 AES.BlockSize = 128;
-                var key = new Rfc2898DeriveBytes(passwordBytes, salt, 1000);
+                Rfc2898DeriveBytes key = new Rfc2898DeriveBytes(passwordBytes, salt, 1000);
                 AES.Key = key.GetBytes(AES.KeySize / 8);
                 AES.IV = key.GetBytes(AES.BlockSize / 8);
                 AES.Mode = CipherMode.CBC;
-                using (var cs = new CryptoStream(ms, AES.CreateDecryptor(), CryptoStreamMode.Write))
+                using (CryptoStream cs = new CryptoStream(ms, AES.CreateDecryptor(), CryptoStreamMode.Write))
                 {
                     cs.Write(data, 0, data.Length);
                     cs.Close();
