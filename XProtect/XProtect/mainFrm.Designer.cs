@@ -30,6 +30,7 @@
         {
             this.monoFlat_ThemeContainer1 = new MonoFlat.MonoFlat_ThemeContainer();
             this.monoFlat_Panel1 = new MonoFlat.MonoFlat_Panel();
+            this.cboxSaveOriginal = new MonoFlat.MonoFlat_CheckBox();
             this.monoFlat_GroupBox1 = new MonoFlat.MonoFlat_GroupBox();
             this.monoFlat_RadioButton4 = new MonoFlat.MonoFlat_RadioButton();
             this.monoFlat_RadioButton3 = new MonoFlat.MonoFlat_RadioButton();
@@ -82,13 +83,13 @@
             this.monoFlat_ThemeContainer1.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
             this.monoFlat_ThemeContainer1.TabIndex = 0;
             this.monoFlat_ThemeContainer1.Text = "XProtect";
-            this.monoFlat_ThemeContainer1.Click += new System.EventHandler(this.monoFlat_ThemeContainer1_Click);
             this.monoFlat_ThemeContainer1.DragDrop += new System.Windows.Forms.DragEventHandler(this.monoFlat_ThemeContainer1_DragDrop);
             this.monoFlat_ThemeContainer1.DragEnter += new System.Windows.Forms.DragEventHandler(this.monoFlat_ThemeContainer1_DragEnter);
             // 
             // monoFlat_Panel1
             // 
             this.monoFlat_Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.monoFlat_Panel1.Controls.Add(this.cboxSaveOriginal);
             this.monoFlat_Panel1.Controls.Add(this.monoFlat_GroupBox1);
             this.monoFlat_Panel1.Controls.Add(this.monoFlat_Separator2);
             this.monoFlat_Panel1.Controls.Add(this.monoFlat_Separator1);
@@ -101,11 +102,23 @@
             this.monoFlat_Panel1.TabIndex = 16;
             this.monoFlat_Panel1.Text = "monoFlat_Panel1";
             // 
+            // cboxSaveOriginal
+            // 
+            this.cboxSaveOriginal.Checked = true;
+            this.cboxSaveOriginal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cboxSaveOriginal.Location = new System.Drawing.Point(257, 42);
+            this.cboxSaveOriginal.Name = "cboxSaveOriginal";
+            this.cboxSaveOriginal.Size = new System.Drawing.Size(163, 16);
+            this.cboxSaveOriginal.TabIndex = 1;
+            this.cboxSaveOriginal.Text = "Save with original name";
+            this.cboxSaveOriginal.Visible = false;
+            this.cboxSaveOriginal.CheckedChanged += new MonoFlat.MonoFlat_CheckBox.CheckedChangedEventHandler(this.monoFlat_CheckBox1_CheckedChanged);
+            // 
             // monoFlat_GroupBox1
             // 
             this.monoFlat_GroupBox1.Controls.Add(this.monoFlat_RadioButton4);
             this.monoFlat_GroupBox1.Controls.Add(this.monoFlat_RadioButton3);
-            this.monoFlat_GroupBox1.Location = new System.Drawing.Point(184, 8);
+            this.monoFlat_GroupBox1.Location = new System.Drawing.Point(176, 8);
             this.monoFlat_GroupBox1.Name = "monoFlat_GroupBox1";
             this.monoFlat_GroupBox1.Size = new System.Drawing.Size(138, 62);
             this.monoFlat_GroupBox1.TabIndex = 17;
@@ -169,6 +182,7 @@
             this.monoFlat_RadioButton1.Size = new System.Drawing.Size(109, 17);
             this.monoFlat_RadioButton1.TabIndex = 0;
             this.monoFlat_RadioButton1.Text = "Normal Method";
+            this.monoFlat_RadioButton1.CheckedChanged += new MonoFlat.MonoFlat_RadioButton.CheckedChangedEventHandler(this.monoFlat_RadioButton1_CheckedChanged);
             // 
             // monoFlat_Button4
             // 
@@ -361,6 +375,7 @@
         private MonoFlat.MonoFlat_RadioButton monoFlat_RadioButton3;
         private MonoFlat.MonoFlat_Separator monoFlat_Separator2;
         private MonoFlat.MonoFlat_GroupBox monoFlat_GroupBox1;
+        private MonoFlat.MonoFlat_CheckBox cboxSaveOriginal;
 
     }
 }

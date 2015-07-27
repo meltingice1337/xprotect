@@ -16,7 +16,6 @@ namespace XProtect
     public partial class mainForm : Form
     {
         #region Variables
-        #region MethodStruct
         public enum Type
         {
             @Notice,
@@ -28,7 +27,8 @@ namespace XProtect
         public enum Type2 { OneFile, EachFile };
         public struct Method { public Type1 Principal; public Type2 Details;}
         Method method = new Method();
-        #endregion
+        bool saveWithOriginalName = true;
+
         #endregion
         public mainForm()
         {
@@ -135,21 +135,27 @@ namespace XProtect
         {
             DisableAll(true);
             string path = (string)e.Argument;
-            try
-            {
+
                 int i = 1;
                 foreach (string item in lstFiles.Items)
                 {
-                    Log(string.Format("Encrypting {0} | {1}/{2}", Path.GetFileName(item), i, lstFiles.Items.Count), Type.Notice);
-                    Encryption.EncryptFile(item, Path.Combine(path, Path.GetFileName(item)), txtPassword.Text);
-                    i++;
+                    try
+                    {
+                        Log(string.Format("Encrypting {0} | {1}/{2}", Path.GetFileName(item), i, lstFiles.Items.Count), Type.Notice);
+                        FileHandle.FileEx file = new FileHandle.FileEx { name = Path.GetFileName(item), data = File.ReadAllBytes(item) };
+                        byte[] data = FileHandle.CombineFiles(new FileHandle.FileEx[] { file });
+                        byte[] encryptedData = Encryption.Encrypt(data, txtPassword.Text);
+                        File.WriteAllBytes(Path.Combine(path,Path.GetFileName(item)), encryptedData);
+                        i++;
+                    }
+                    catch
+                    {
+                        Log("Some error occured at file !" + Path.GetFileName(item), Type.Error);
+                        Thread.Sleep(1500);
+                    }
                 }
                 Log("File(s) encrypted successfully !", Type.Success);
-            }
-            catch
-            {
-                Log("Some error occured !", Type.Error);
-            }
+           
             DisableAll(false);
         }
         void bw_normal_onefile_DoWork(object sender, DoWorkEventArgs e)
@@ -186,12 +192,14 @@ namespace XProtect
             if (monoFlat_RadioButton2.Checked)
             {
                 method.Principal = Type1.Portable;
+                cboxSaveOriginal.Visible = false;
                 monoFlat_RadioButton3.Enabled = monoFlat_RadioButton4.Enabled = false;
             }
             else
             {
                 method.Principal = Type1.Normal;
                 monoFlat_RadioButton3.Enabled = monoFlat_RadioButton4.Enabled = true;
+                if (monoFlat_RadioButton4.Checked) cboxSaveOriginal.Visible = true;
             }
 
         }
@@ -215,8 +223,8 @@ namespace XProtect
         }
         private void monoFlat_RadioButton3_CheckedChanged(object sender)
         {
-            if (monoFlat_RadioButton3.Checked) method.Details = Type2.OneFile;
-            else method.Details = Type2.EachFile;
+            if (monoFlat_RadioButton3.Checked) { method.Details = Type2.OneFile; cboxSaveOriginal.Visible = false; }
+            else { method.Details = Type2.EachFile; cboxSaveOriginal.Visible = true; }
         }
 
         private void monoFlat_Button4_Click(object sender, EventArgs e)
@@ -266,11 +274,6 @@ namespace XProtect
             }));
 
         }
-        private void monoFlat_ThemeContainer1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void monoFlat_Button2_Click(object sender, EventArgs e)
         {
             if (lstFiles.Items.Count == 0)
@@ -330,7 +333,24 @@ namespace XProtect
                 try
                 {
                     Log(string.Format("Decrypting {0} | {1}/{2}", Path.GetFileName(item), i, lstFiles.Items.Count), Type.Notice);
-                    Encryption.DecryptFile(item, Path.Combine(path, Path.GetFileName(item)), txtPassword.Text);
+                    byte[] data = File.ReadAllBytes(item);
+                    byte[] decryptedBytes = Encryption.Decrypt(data, txtPassword.Text);
+                    var files = FileHandle.SplitFiles(decryptedBytes);
+                    if(files.Length == 1 && saveWithOriginalName == false)
+                    {
+                        File.WriteAllBytes(Path.Combine(path, Path.GetFileName(item)), files[0].data);
+                    }
+                    else if (files.Length == 1 && saveWithOriginalName == true)
+                    {
+                        File.WriteAllBytes(Path.Combine(path, files[0].name), files[0].data);
+                    }
+                    else
+                    {
+                        foreach(var file in files)
+                        {
+                            File.WriteAllBytes(Path.Combine(path, file.name), file.data);
+                        }
+                    }
                     i++;
                     Log("File(s) decrypted successfully !", Type.Success);
                 }
@@ -382,6 +402,16 @@ namespace XProtect
             {
                 monoFlat_Button1.Enabled = monoFlat_Button2.Enabled = monoFlat_Button3.Enabled = monoFlat_Button4.Enabled = monoFlat_RadioButton1.Enabled = monoFlat_RadioButton2.Enabled = monoFlat_RadioButton3.Enabled = monoFlat_RadioButton4.Enabled = lstFiles.Enabled = !state;
             }));
+        }
+
+        private void monoFlat_CheckBox1_CheckedChanged(object sender)
+        {
+            saveWithOriginalName = cboxSaveOriginal.Checked;
+        }
+
+        private void monoFlat_RadioButton1_CheckedChanged(object sender)
+        {
+
         }
     }
 }
