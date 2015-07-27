@@ -2,7 +2,7 @@
 Protect your files easy &amp; secure
 ### What is this ?
 
-**XProtect** protects your files easy & secure and with a beautiful GUI. Not only you can encrypt/decrypt files, you can create an executable that will contain all your files. You can take this executable everywhere and extract your files **on the spot**, without needing any extra software. You can press 'Add Files' or use drag and drop to add files. You can press 'Remove Files' or press delete to remove the selected files in the list. As encryption algorithm it uses AES-256.
+**XProtect** protects your files easy & secure and with a beautiful GUI. Not only you can encrypt/decrypt files, you can create an executable that will contain all your files. You can take this executable everywhere and extract your files **on the spot**, without needing any extra software. You can press 'Add Files' or use drag and drop to add files. You can press 'Remove Files' or delete in order to remove the selected files in the list. As encryption algorithm it uses AES-256.
 
 There are 2 methods of encryption:
 
