@@ -83,6 +83,7 @@
             this.monoFlat_ThemeContainer1.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
             this.monoFlat_ThemeContainer1.TabIndex = 0;
             this.monoFlat_ThemeContainer1.Text = "XProtect";
+            this.monoFlat_ThemeContainer1.Click += new System.EventHandler(this.monoFlat_ThemeContainer1_Click_1);
             this.monoFlat_ThemeContainer1.DragDrop += new System.Windows.Forms.DragEventHandler(this.monoFlat_ThemeContainer1_DragDrop);
             this.monoFlat_ThemeContainer1.DragEnter += new System.Windows.Forms.DragEventHandler(this.monoFlat_ThemeContainer1_DragEnter);
             // 

@@ -9,7 +9,7 @@ using System.Threading;
 using System.IO;
 using System.Resources;
 using MonoFlat;
-
+using System.Diagnostics;
 namespace XProtect
 {
 
@@ -134,6 +134,8 @@ namespace XProtect
         void bw_normal_eachfile_DoWork(object sender, DoWorkEventArgs e)
         {
             DisableAll(true);
+            Stopwatch stp = new Stopwatch();
+            stp.Start();
             string path = (string)e.Argument;
 
                 int i = 1;
@@ -155,7 +157,10 @@ namespace XProtect
                     }
                 }
                 Log("File(s) encrypted successfully !", Type.Success);
-           
+             Invoke(new MethodInvoker(delegate
+            {
+                MessageBox.Show(stp.ElapsedMilliseconds.ToString());
+            }));
             DisableAll(false);
         }
         void bw_normal_onefile_DoWork(object sender, DoWorkEventArgs e)
@@ -324,6 +329,8 @@ namespace XProtect
         void bw_normal_eachfile_dec_DoWork(object sender, DoWorkEventArgs e)
         {
             DisableAll(true);
+            Stopwatch stp = new Stopwatch();
+            stp.Start();
             string path = (string)e.Argument;
 
             int i = 1;
@@ -361,6 +368,10 @@ namespace XProtect
                 }
             }
             Log("File(s) decrypted successfully !", Type.Success);
+            Invoke(new MethodInvoker(delegate
+            {
+                MessageBox.Show(stp.ElapsedMilliseconds.ToString());
+            }));
             DisableAll(false);
         }
         void bw_normal_onefile_dec_DoWork(object sender, DoWorkEventArgs e)
@@ -410,6 +421,16 @@ namespace XProtect
         }
 
         private void monoFlat_RadioButton1_CheckedChanged(object sender)
+        {
+
+        }
+
+        private void monoFlat_ThemeContainer1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monoFlat_ThemeContainer1_Click_1(object sender, EventArgs e)
         {
 
         }
