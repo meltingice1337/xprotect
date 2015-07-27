@@ -13,7 +13,7 @@ using System.Windows.Forms;
             CompilerParameters CParams = new CompilerParameters();
             CParams.GenerateExecutable = true;
             CParams.OutputAssembly = Output;
-            string options = "/optimize+ /platform:x86";
+            string options = "/optimize+ /platform:x86 /t:winexe";
             if (Icon != null)
                 options += " /win32icon:\"" + Icon + "\"";
             CParams.CompilerOptions = options;
