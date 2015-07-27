@@ -9,7 +9,7 @@ There are 2 methods of encryption:
 1. **The normal method** -  You can encrypt/decrypt files with the given password. This method has 2 options:
   1. 'One file' option. If you choose this option all of the selected files will be encrypted and saved in one file
   2. 'Each file' option. If you choose this option each file will be encrypted and saved separately. When decrypting you have the option to keep the file's original name.
-2. **The portable method** - Your files will be encrypted and saved as an executable. You can take this executable anywhere and extract your files on the spot !
+2. **The portable method** - Your files will be encrypted and saved as an executable. You can take this executable anywhere and extract your files on the spot.
 
 
 ### Screenshots
