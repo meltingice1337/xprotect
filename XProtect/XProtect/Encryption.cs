@@ -5,51 +5,62 @@ using System.Security.Cryptography;
 using System.IO.Compression;
     class Encryption
     {
-        public static int keySize = 256;
-        public static int iterations = 10000;
+        private static readonly byte[] salt = new byte[] { 4, 8, 15, 16, 23, 42, 6, 120 };
+        private static readonly int keySize = 256;
 
         public static byte[] Encrypt(byte[] data, string password)
         {
-            byte[] key = Encoding.ASCII.GetBytes(password);
-            byte[] encBytes;
-            byte[] IV = { 25, 32, 59, 24, 54, 12, 56, 23, 68, 35, 41, 65, 78, 32, 13, 89 };
-            using (RijndaelManaged encryptor = new RijndaelManaged())
+            byte[] result = null;
+            byte[] passwordBytes = Encoding.Default.GetBytes(password);
+
+            using (MemoryStream ms = new MemoryStream())
             {
-                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(key, IV, iterations);
-                encryptor.Key = pdb.GetBytes(keySize / 8);
-                encryptor.IV = IV;
-                using (MemoryStream ms = new MemoryStream())
+                using (RijndaelManaged AES = new RijndaelManaged())
                 {
-                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
+                    AES.KeySize = keySize;
+                    AES.BlockSize = 128;
+                    var key = new Rfc2898DeriveBytes(passwordBytes, salt, 1000);
+                    AES.Key = key.GetBytes(AES.KeySize / 8);
+                    AES.IV = key.GetBytes(AES.BlockSize / 8);
+                    AES.Mode = CipherMode.CBC;
+                    using (var cs = new CryptoStream(ms, AES.CreateEncryptor(), CryptoStreamMode.Write))
                     {
                         cs.Write(data, 0, data.Length);
                         cs.Close();
                     }
-                    encBytes = ms.ToArray();
-                    return encBytes;
+                    result = ms.ToArray();
                 }
+
             }
+            return result;
         }
-        public static byte[] Decrypt(byte[] data,string password)
+        public static byte[] Decrypt(byte[] data, string password)
         {
-            byte[] key = Encoding.ASCII.GetBytes(password);
-            byte[] IV = { 25, 32, 59, 24, 54, 12, 56, 23, 68, 35, 41, 65, 78, 32, 13, 89 };
-            using (RijndaelManaged encryptor = new RijndaelManaged())
+            byte[] result = null;
+            byte[] passwordBytes = Encoding.Default.GetBytes(password);
+
+            using (MemoryStream ms = new MemoryStream())
             {
-                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(key, IV, iterations);
-                encryptor.Key = pdb.GetBytes(keySize / 8);
-                encryptor.IV = IV;
-                using (MemoryStream ms = new MemoryStream())
+                using (RijndaelManaged AES = new RijndaelManaged())
                 {
-                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateDecryptor(), CryptoStreamMode.Write))
+                    AES.KeySize = keySize;
+                    AES.BlockSize = 128;
+                    var key = new Rfc2898DeriveBytes(passwordBytes, salt, 1000);
+                    AES.Key = key.GetBytes(AES.KeySize / 8);
+                    AES.IV = key.GetBytes(AES.BlockSize / 8);
+                    AES.Mode = CipherMode.CBC;
+                    using (var cs = new CryptoStream(ms, AES.CreateDecryptor(), CryptoStreamMode.Write))
                     {
                         cs.Write(data, 0, data.Length);
                         cs.Close();
                     }
-                    return ms.ToArray();
+                    result = ms.ToArray();
                 }
             }
+
+            return result;
         }
+      
         public static void EncryptFile(string inPath, string outPath, string password)
         {
             byte[] encBytes = File.ReadAllBytes(inPath);
