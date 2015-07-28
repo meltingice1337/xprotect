@@ -111,7 +111,7 @@ public class Form1 : Form
             this.txtLog.Name = "txtLog";
             this.txtLog.ReadOnly = true;
             this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtLog.Size = new System.Drawing.Size(366, 201);
+            this.txtLog.Size = new System.Drawing.Size(369, 201);
             this.txtLog.TabIndex = 20;
             this.txtLog.Text = "XProtector - Portable\r\n\r\n------------------------------------------\r\nProgram star" +
     "ted\r\n";
@@ -122,9 +122,9 @@ public class Form1 : Form
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.button3.Image = null;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(302, 302);
+            this.button3.Location = new System.Drawing.Point(290, 302);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 41);
+            this.button3.Size = new System.Drawing.Size(91, 41);
             this.button3.TabIndex = 19;
             this.button3.Text = "Browse ...";
             this.button3.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -138,7 +138,7 @@ public class Form1 : Form
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(12, 477);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(372, 40);
+            this.button2.Size = new System.Drawing.Size(366, 40);
             this.button2.TabIndex = 18;
             this.button2.Text = "Decrypt";
             this.button2.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -192,6 +192,7 @@ public class Form1 : Form
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = false;
+            this.txtPassword.SelectionStart = 0;
             this.txtPassword.Size = new System.Drawing.Size(366, 41);
             this.txtPassword.TabIndex = 14;
             this.txtPassword.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
@@ -220,7 +221,8 @@ public class Form1 : Form
             this.txtLocation.Multiline = false;
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.ReadOnly = true;
-            this.txtLocation.Size = new System.Drawing.Size(284, 41);
+            this.txtLocation.SelectionStart = 0;
+            this.txtLocation.Size = new System.Drawing.Size(272, 41);
             this.txtLocation.TabIndex = 12;
             this.txtLocation.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtLocation.UseSystemPasswordChar = false;
@@ -1103,7 +1105,7 @@ namespace MonoFlat
             StringFormat sf = new StringFormat();
             sf.Alignment = StringAlignment.Near;
             sf.LineAlignment = StringAlignment.Near;
-            G.DrawString(Text, new Font("Microsoft Sans Serif", 12, FontStyle.Bold), new SolidBrush(Color.FromArgb(255, 254, 255)), new Rectangle(20, 20, Width - 1, Height),sf);
+            G.DrawString(Text, new Font("Verdana", 12, FontStyle.Bold), new SolidBrush(Color.FromArgb(255, 254, 255)), new Rectangle(20, 20, Width - 1, Height),sf);
         }
     }
 

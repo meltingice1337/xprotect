@@ -51,9 +51,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="stubtheme.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="theme.cs">
       <SubType>Component</SubType>
     </Compile>
