@@ -73,14 +73,14 @@ namespace XProtect.Properties {
         ///using System.Windows.Forms;
         ///using System.Drawing;
         ///using System.Diagnostics;
+        ///using System.Drawing.Drawing2D;
+        ///using MonoFlat;
         ///public class Form1 : Form
         ///{
-        ///    private Label label1;
-        ///    private TextBox txtLocation;
-        ///    private Label label2;
-        ///    private TextBox txtPassword;
-        ///    private Label label3;
-        ///    priva [rest of string was truncated]&quot;;.
+        ///
+        ///    private enum OWType { Ask, Force, None };
+        ///    private OWType OverWriteType;
+        ///    private MonoFlat.Mon [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string stub {
             get {

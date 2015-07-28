@@ -121,7 +121,7 @@ namespace XProtect
                     Writer.Generate();
                 }
                 string Source = XProtect.Properties.Resources.stub;
-                Compiler.CompileFromSource(Source, path, null, new string[] { ResFile });
+                Compiler.Compile(Source, path, ResFile, null );
 
             }
             catch

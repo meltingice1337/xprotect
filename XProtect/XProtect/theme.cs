@@ -1620,7 +1620,6 @@ namespace MonoFlat
 
         #endregion
         #region  Properties
-
         public bool Checked
         {
             get
