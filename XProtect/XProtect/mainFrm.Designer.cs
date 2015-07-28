@@ -281,9 +281,9 @@
             this.monoFlat_Button2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.monoFlat_Button2.Image = null;
             this.monoFlat_Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.monoFlat_Button2.Location = new System.Drawing.Point(229, 486);
+            this.monoFlat_Button2.Location = new System.Drawing.Point(229, 476);
             this.monoFlat_Button2.Name = "monoFlat_Button2";
-            this.monoFlat_Button2.Size = new System.Drawing.Size(203, 29);
+            this.monoFlat_Button2.Size = new System.Drawing.Size(203, 39);
             this.monoFlat_Button2.TabIndex = 7;
             this.monoFlat_Button2.Text = "Decrypt";
             this.monoFlat_Button2.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -310,9 +310,9 @@
             this.monoFlat_Button1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.monoFlat_Button1.Image = null;
             this.monoFlat_Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.monoFlat_Button1.Location = new System.Drawing.Point(12, 486);
+            this.monoFlat_Button1.Location = new System.Drawing.Point(12, 476);
             this.monoFlat_Button1.Name = "monoFlat_Button1";
-            this.monoFlat_Button1.Size = new System.Drawing.Size(211, 29);
+            this.monoFlat_Button1.Size = new System.Drawing.Size(211, 39);
             this.monoFlat_Button1.TabIndex = 5;
             this.monoFlat_Button1.Text = "Encrypt";
             this.monoFlat_Button1.TextAlignment = System.Drawing.StringAlignment.Center;

@@ -1589,7 +1589,7 @@ namespace MonoFlat
                 }
             }
 
-            G.DrawString(Text, Font, new SolidBrush(Color.FromArgb(116, 125, 132)), new Point(20, 0));
+            G.DrawString(Text, Font, new SolidBrush(Color.FromArgb(173, 173, 173)), new Point(20, 0));
         }
     }
     #endregion
