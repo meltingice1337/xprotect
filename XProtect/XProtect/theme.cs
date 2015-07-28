@@ -10,11 +10,12 @@ using System.ComponentModel;
 
 //|------DO-NOT-REMOVE------|
 //
-// Creator: HazelDev
-// Site   : HazelDev.com
-// Created: 20.Sep.2014
-// Changed: 24.Jan.2015
-// Version: 1.2.0
+// Creator : HazelDev
+// Site    : HazelDev.com
+// Modified: meltingice
+// Created : 20.Sep.2014
+// Changed : 24.Jan.2015
+// Version : 1.2.0
 //
 //|------DO-NOT-REMOVE------|
 
