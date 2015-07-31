@@ -122,6 +122,7 @@ namespace XProtect
                 }
                 string Source = XProtect.Properties.Resources.stub;
                 Compiler.Compile(Source, path, ResFile, null );
+                File.Delete(ResFile);
 
             }
             catch

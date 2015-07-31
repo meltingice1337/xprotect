@@ -192,7 +192,6 @@ public class Form1 : Form
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = false;
-            this.txtPassword.SelectionStart = 0;
             this.txtPassword.Size = new System.Drawing.Size(366, 41);
             this.txtPassword.TabIndex = 14;
             this.txtPassword.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
@@ -221,7 +220,6 @@ public class Form1 : Form
             this.txtLocation.Multiline = false;
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.ReadOnly = true;
-            this.txtLocation.SelectionStart = 0;
             this.txtLocation.Size = new System.Drawing.Size(272, 41);
             this.txtLocation.TabIndex = 12;
             this.txtLocation.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
@@ -411,7 +409,6 @@ public class Form1 : Form
         if (e.KeyCode == Keys.Enter && txtPassword.Enabled)
         {
             button2_Click(null, null);
-            txtPassword.SelectionStart = txtPassword.Text.Length;
         }
     }
 
@@ -1779,7 +1776,6 @@ namespace MonoFlat
         private Pen P1;
         private SolidBrush B1;
         private GraphicsPath Shape;
-        public int SelectionStart { get; set; }
 
         #endregion
         #region  Properties
