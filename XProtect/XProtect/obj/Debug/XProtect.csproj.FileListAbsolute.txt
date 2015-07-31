@@ -12,3 +12,11 @@ E:\GIT\xprotect\XProtect\XProtect\obj\Debug\XProtect.csprojResolveAssemblyRefere
 E:\GIT\xprotect\XProtect\XProtect\obj\Debug\XProtect.Properties.Resources.resources
 E:\GIT\xprotect\XProtect\XProtect\obj\Debug\XProtect.csproj.GenerateResource.Cache
 E:\GIT\xprotect\XProtect\XProtect\obj\Debug\XProtect.mainForm.resources
+C:\Users\Admin\Documents\GitHub\xprotect\XProtect\XProtect\bin\Debug\XProtect.exe
+C:\Users\Admin\Documents\GitHub\xprotect\XProtect\XProtect\bin\Debug\XProtect.pdb
+C:\Users\Admin\Documents\GitHub\xprotect\XProtect\XProtect\obj\Debug\XProtect.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\xprotect\XProtect\XProtect\obj\Debug\XProtect.mainForm.resources
+C:\Users\Admin\Documents\GitHub\xprotect\XProtect\XProtect\obj\Debug\XProtect.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\xprotect\XProtect\XProtect\obj\Debug\XProtect.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\GitHub\xprotect\XProtect\XProtect\obj\Debug\XProtect.exe
+C:\Users\Admin\Documents\GitHub\xprotect\XProtect\XProtect\obj\Debug\XProtect.pdb
