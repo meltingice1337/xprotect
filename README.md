@@ -30,3 +30,4 @@ There are 2 methods of encryption:
 
 - The theme - (www.HazelDev.com)
 - Compiler Class + Managed Resource - (http://www.hackforums.net/showthread.php?tid=3622113)
+- Icon - (http://www.iconarchive.com/show/android-settings-icons-by-graphicloads/lock-icon.html)
