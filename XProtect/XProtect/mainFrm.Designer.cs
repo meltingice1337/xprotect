@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.monoFlat_ThemeContainer1 = new MonoFlat.MonoFlat_ThemeContainer();
             this.monoFlat_Panel1 = new MonoFlat.MonoFlat_Panel();
             this.cboxSaveOriginal = new MonoFlat.MonoFlat_CheckBox();
@@ -338,11 +339,11 @@
             this.Controls.Add(this.monoFlat_ThemeContainer1);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(445, 594);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(445, 594);
             this.Name = "mainForm";
-            this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "XProtect";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
