@@ -193,7 +193,7 @@
             this.monoFlat_Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.monoFlat_Button4.Location = new System.Drawing.Point(286, 280);
             this.monoFlat_Button4.Name = "monoFlat_Button4";
-            this.monoFlat_Button4.Size = new System.Drawing.Size(146, 36);
+            this.monoFlat_Button4.Size = new System.Drawing.Size(146, 37);
             this.monoFlat_Button4.TabIndex = 15;
             this.monoFlat_Button4.Text = "Remove Files";
             this.monoFlat_Button4.TextAlignment = System.Drawing.StringAlignment.Center;

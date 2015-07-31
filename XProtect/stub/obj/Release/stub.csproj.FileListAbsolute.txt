@@ -1,0 +1,7 @@
+E:\GIT\xprotect\XProtect\stub\bin\Release\stub.exe
+E:\GIT\xprotect\XProtect\stub\bin\Release\stub.pdb
+E:\GIT\xprotect\XProtect\stub\obj\Release\stub.csprojResolveAssemblyReference.cache
+E:\GIT\xprotect\XProtect\stub\obj\Release\Form1.resources
+E:\GIT\xprotect\XProtect\stub\obj\Release\stub.csproj.GenerateResource.Cache
+E:\GIT\xprotect\XProtect\stub\obj\Release\stub.exe
+E:\GIT\xprotect\XProtect\stub\obj\Release\stub.pdb

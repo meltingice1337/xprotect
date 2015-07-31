@@ -1,0 +1,8 @@
+E:\GIT\xprotect\XProtect\XProtect\bin\Release\XProtect.exe
+E:\GIT\xprotect\XProtect\XProtect\bin\Release\XProtect.pdb
+E:\GIT\xprotect\XProtect\XProtect\obj\Release\XProtect.csprojResolveAssemblyReference.cache
+E:\GIT\xprotect\XProtect\XProtect\obj\Release\XProtect.mainForm.resources
+E:\GIT\xprotect\XProtect\XProtect\obj\Release\XProtect.Properties.Resources.resources
+E:\GIT\xprotect\XProtect\XProtect\obj\Release\XProtect.csproj.GenerateResource.Cache
+E:\GIT\xprotect\XProtect\XProtect\obj\Release\XProtect.exe
+E:\GIT\xprotect\XProtect\XProtect\obj\Release\XProtect.pdb

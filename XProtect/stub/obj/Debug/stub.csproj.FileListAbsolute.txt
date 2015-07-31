@@ -1,0 +1,6 @@
+E:\GIT\xprotect\XProtect\stub\bin\Debug\stub.exe
+E:\GIT\xprotect\XProtect\stub\bin\Debug\stub.pdb
+E:\GIT\xprotect\XProtect\stub\obj\Debug\stub.exe
+E:\GIT\xprotect\XProtect\stub\obj\Debug\stub.pdb
+E:\GIT\xprotect\XProtect\stub\obj\Debug\Form1.resources
+E:\GIT\xprotect\XProtect\stub\obj\Debug\stub.csproj.GenerateResource.Cache
