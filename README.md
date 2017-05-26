@@ -26,6 +26,10 @@ There are 2 methods of encryption:
 |25,4 MB| 1274 ms| 1178 ms|
 |313 MB | 15 949 ms| 14 759 ms|
 
+### Donations
+
+BTC: 13aZLj8bGbXVP7oMeAzByXULwbjnW3VXDV
+
 ### Credits
 
 - The theme - (www.HazelDev.com)
